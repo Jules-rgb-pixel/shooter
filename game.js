@@ -100,9 +100,13 @@ let gameRunning = true;
 let keys = {};
 document.addEventListener('keydown', (e) => {
     keys[e.code] = true;
-    if (e.code === 'Space') {
+    if (e.code === 'Space' && gameRunning) {
         e.preventDefault();
         bullets.push(player.shoot());
+    }
+    if (e.code === 'KeyR' && !gameRunning) {
+        e.preventDefault();
+        restart();
     }
 });
 document.addEventListener('keyup', (e) => {
@@ -179,7 +183,20 @@ function gameLoop() {
 // Game over
 function gameOver() {
     gameRunning = false;
+    gameOverElement.innerHTML = 'Game Over<br>Press R to Restart';
     gameOverElement.style.display = 'block';
+}
+
+// Restart game
+function restart() {
+    player = new Player();
+    bullets = [];
+    enemies = [];
+    score = 0;
+    scoreElement.textContent = `Score: ${score}`;
+    gameOverElement.style.display = 'none';
+    gameRunning = true;
+    gameLoop();
 }
 
 // Start game
