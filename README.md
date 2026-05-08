@@ -1,26 +1,8 @@
 # Simple Shooter Game
 
-A basic 2D shooter game available in both Python (local) and web (playable online) versions.
+A basic 2D shooter game available in both Python (desktop) and web versions.
 
-## Web Version (Playable Online)
-
-The game is now available as a web-based version using HTML5 Canvas and JavaScript.
-
-### Play Online
-
-Visit: https://jules-rgb-pixel.github.io/shooter/
-
-### How to Play (Web Version)
-
-- Use LEFT and RIGHT arrow keys to move the player (green rectangle).
-- Press SPACE to shoot bullets.
-- Avoid red enemy rectangles; if they reach the bottom or hit you, game over.
-- Score points by hitting enemies with bullets.
-- Press R to restart after game over.
-
-## Local Python Version
-
-A desktop version built with Python and Pygame.
+## Python Version (Desktop)
 
 ### Requirements
 
@@ -41,10 +23,27 @@ Run the game with:
 python3 main.py
 ```
 
-### Controls
+## Web Version (Browser)
+
+### Requirements
+
+- A modern web browser with JavaScript enabled
+
+### Running the Game
+
+Open `index.html` in your web browser.
+
+## How to Play
+
+- Use LEFT and RIGHT arrow keys to move the player (green rectangle).
+- Press SPACE to shoot bullets.
+- Avoid red enemy rectangles; if they reach the bottom or hit you, game over.
+- Score points by hitting enemies with bullets.
+
+## Controls
 
 - **LEFT/RIGHT arrows**: Move player
 - **SPACE**: Shoot
-- **Close window**: Quit game
+- **Close window/tab**: Quit game
 
 Enjoy!
